@@ -1,0 +1,26 @@
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+
+class Employee(Person):
+    def __init__(self, name, age, emp_id):
+        super().__init__(name, age)
+        self.emp_id = emp_id
+
+    def display_info(self):
+        super().display_info()
+        print(f"Employee ID: {self.emp_id}")
+
+# Create instances of the classes
+person = Person("John Doe", 25)
+employee = Employee("Jane Smith", 30, "EMP123")
+
+# Call the display_info() method on each instance
+person.display_info()
+print("------------------")
+employee.display_info()
